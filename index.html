@@ -1,180 +1,236 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./assests/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Spotify - Web Player: Music for everyone</title>
- </head>
- <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <title>Spotify - Web Player: Music for everyone</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="main">
-        <div class="sidebar">
-            <div class="nav">
-               <div class="nav-option" style="opacity: 1;">
-                  <i class="fa-solid fa-house"></i> 
-                  <a href="#"></a>Home
-               </div>
-               <div class="nav-option"> 
-                  <i class="fa-solid fa-magnifying-glass"></i> 
-                  <a href="#"> </a>Search
-               </div>
-            </div>
+        <aside class="sidebar">
+            <nav class="nav">
+                <a href="#" class="nav-option active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </a>
+            </nav>
 
             <div class="library">
-               <div class="options ">
-                  <div class="lib-options nav-option ">
-                     <img src="./assests/library_icon.png" > 
-                     <a href="#"></a>Your Library
-                  </div>
-                  <div class="icons">
-                     <i class="fa-solid fa-plus"></i>
-                     <i class="fa-solid fa-arrow-right"></i>
-                  </div>
-               </div>
-               <div class="boxes">
-                  <div class="box">
-                     <p class="box-p1">Create your first playlist</p>
-                     <p class="box-p2">it's easy, we'll help you</p>
-                     <button class="badge">Create Playlist</button>
-                  </div>
-                  <div class="box">
-                     <p class="box-p1">Let's find some podcasts to follow</p>
-                     <p class="box-p2">we'll keep you updated on new episodes.</p>
-                     <button class="badge">Browse podcasts</button>
-                  </div>
-               </div>
+                <div class="library-header">
+                    <div class="lib-title">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 22V3h3v18H3zm7 0V3h3v19h-3zm7-5V3h3v14h-3z'/%3E%3C/svg%3E" alt="Library">
+                        <span>Your Library</span>
+                    </div>
+                    <div class="lib-icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
 
+                <div class="promo-box">
+                    <h3>Create your first playlist</h3>
+                    <p>It's easy, we'll help you</p>
+                    <button class="btn">Create Playlist</button>
+                </div>
+
+                <div class="promo-box">
+                    <h3>Let's find some podcasts to follow</h3>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button class="btn">Browse podcasts</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="sticky-nav">
+                <div class="nav-arrows">
+                    <div class="nav-arrow">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E" alt="Back">
+                    </div>
+                    <div class="nav-arrow">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E" alt="Forward">
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn btn-premium">Explore Premium</button>
+                    <button class="btn btn-install">
+                        <i class="fa-regular fa-circle-down"></i> Install app
+                    </button>
+                    <div class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>Recently Played</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23278EA5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231E3A8A;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='300' height='300'/%3E%3Ctext x='50%25' y='40%25' font-family='Arial' font-size='48' font-weight='bold' fill='white' text-anchor='middle'%3ETop 50%3C/text%3E%3Cline x1='75' y1='150' x2='225' y2='150' stroke='white' stroke-width='2'/%3E%3Ctext x='50%25' y='65%25' font-family='Arial' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EGLOBAL%3C/text%3E%3C/svg%3E" alt="Top 50 Global" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-subtitle">Your daily update of the most played tracks</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Trending now near you</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%233a5a40' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMahiye Jinna%3C/text%3E%3C/svg%3E" alt="Mahiye Jinna Sohna" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Mahiye Jinna Sohna</h3>
+                        <p class="card-subtitle">Darshan Raval, Asees Kaur</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%232c2c2c' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3ESilent Ocean%3C/text%3E%3C/svg%3E" alt="Silent Ocean" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Silent Ocean</h3>
+                        <p class="card-subtitle">Peaceful instrumental music</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23c17817' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAlter Ego%3C/text%3E%3C/svg%3E" alt="Alter Ego" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Alter Ego - Naa Ready</h3>
+                        <p class="card-subtitle">Trending Tamil hits</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%234a1c40' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EIndie Mix%3C/text%3E%3C/svg%3E" alt="Indie Mix" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Indie Mix</h3>
+                        <p class="card-subtitle">Fresh indie discoveries</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%232d545e' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EChill Vibes%3C/text%3E%3C/svg%3E" alt="Chill Vibes" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Chill Vibes</h3>
+                        <p class="card-subtitle">Relax and unwind</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Featured Charts</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23278EA5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231E3A8A;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='300' height='300'/%3E%3Ctext x='50%25' y='40%25' font-family='Arial' font-size='48' font-weight='bold' fill='white' text-anchor='middle'%3ETop 50%3C/text%3E%3Cline x1='75' y1='150' x2='225' y2='150' stroke='white' stroke-width='2'/%3E%3Ctext x='50%25' y='65%25' font-family='Arial' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EGLOBAL%3C/text%3E%3C/svg%3E" alt="Top 50 Global" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-subtitle">Your daily update of the most played tracks</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23DB2777;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad3)' width='300' height='300'/%3E%3Ctext x='50%25' y='35%25' font-family='Arial' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3ETop Songs%3C/text%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='42' font-weight='bold' fill='white' text-anchor='middle'%3EGLOBAL%3C/text%3E%3Ctext x='50%25' y='75%25' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EWeekly Music Charts%3C/text%3E%3C/svg%3E" alt="Top Songs Global" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Top Songs - Global</h3>
+                        <p class="card-subtitle">Your weekly update of the most played songs right now</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23DC2626;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23991B1B;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad4)' width='300' height='300'/%3E%3Ctext x='50%25' y='35%25' font-family='Arial' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3ETop Songs%3C/text%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='42' font-weight='bold' fill='white' text-anchor='middle'%3EINDIA%3C/text%3E%3Ctext x='50%25' y='75%25' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EWeekly Music Charts%3C/text%3E%3C/svg%3E" alt="Top Songs India" class="card-img">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Top Songs - India</h3>
+                        <p class="card-subtitle">Your weekly update of the most played tracks in India</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="music-player">
+            <div class="now-playing">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%233a5a40' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMahiye Jinna%3C/text%3E%3C/svg%3E" alt="Now Playing" class="now-playing-img">
+                <div class="now-playing-info">
+                    <div class="track-name">Mahiye Jinna Sohna</div>
+                    <div class="artist-name">Darshan Raval, Asees Kaur</div>
+                </div>
+                <i class="fa-regular fa-heart like-button"></i>
+                <i class="fa-solid fa-list" style="color: var(--text-secondary); margin-left: 0.75rem; cursor: pointer;"></i>
+            </div>
+
+            <div class="player-center">
+                <div class="player-controls">
+                    <button class="control-btn" title="Shuffle">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                    <button class="control-btn" title="Previous">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+                    <button class="play-btn" title="Play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button class="control-btn" title="Next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                    <button class="control-btn" title="Repeat">
+                        <i class="fa-solid fa-repeat"></i>
+                    </button>
+                </div>
+                <div class="progress-wrapper">
+                    <span class="time">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="time">3:33</span>
+                </div>
+            </div>
+
+            <div class="player-right">
+                <i class="fa-solid fa-microphone" style="color: var(--text-secondary); cursor: pointer;" title="Lyrics"></i>
+                <i class="fa-solid fa-list-ul" style="color: var(--text-secondary); cursor: pointer;" title="Queue"></i>
+                <i class="fa-solid fa-volume-high volume-icon" title="Volume"></i>
+                <div class="volume-slider">
+                    <div class="volume-fill"></div>
+                </div>
+                <i class="fa-solid fa-up-right-and-down-left-from-center" style="color: var(--text-secondary); cursor: pointer; font-size: 0.9rem;" title="Full Screen"></i>
             </div>
         </div>
-
-        
-        
-      <div class="main-content">
-            <div class="stickynav">
-               <div class="sticky-nav-icons">
-                  <img src="/assests/backward_icon.png" >
-                  <img src="/assests/forward_icon.png" class="hide" >
-               </div>
-               
-               <div class="sticky-nav-options">
-                  <button class="badge nav-items hide"> Explore Premium</button>
-                  <button class="badge nav-items dark-badge"><i class="fa-regular fa-circle-down" style="margin-right : 0.5rem"></i> Install app</button>
-                  <i class="fa-regular fa-user"></i>
-               </div>
-
-               
-            </div>
-
-
-            
-               <h2>Recently Played</h2>
-               <div class="card-container">
-                  <div class="card">
-                  <img src="./assests/card1img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div>   
-               </div>
-               <h2>Trending now near you</h2>
-               <div class="card-container">
-                  <div class="card">
-                  <img src="./assests/card2img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div>   
-                  <div class="card">
-                  <img src="./assests/card3img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  <div class="card">
-                  <img src="./assests/card4img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  <div class="card">
-                  <img src="./assests/card5img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  <div class="card">
-                  <img src="./assests/card2img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  
-               </div>
-               <h2>Featured Charts</h2>
-               <div class="card-container">
-                  <div class="card">
-                  <img src="./assests/card1img.jpeg" class="card-img">
-                  <p class="card-title">Top 50 - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  <div class="card">
-                  <img src="./assests/card5img.jpeg" class="card-img">
-                  <p class="card-title">Top Songs - Global</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div> 
-                  <div class="card">
-                  <img src="./assests/card6img.jpeg" class="card-img">
-                  <p class="card-title">Top Songs - India</p>
-                  <p class="card-info">Your daily update of the most played tracks</p>
-                  </div>   
-               </div>
-               <div class="footer">
-                  <div class="line">
-
-                  </div>
-               </div>
-
-      </div>
-
-
-
-      <div class="music-player">
-         <div class="album">
-            <div class="album-img"> <img src="./assests/card2img.jpeg" > </div>
-            <div class="album-info">
-               <p class="album-name" style="display: block;">Mahiya jinna sohna </p>
-               <p class="album-artist" style="display: block";>  Jubin Nautiyal</p>
-            </div>
-            <img src="./homework/album_icon1.png" alt="">
-            <img src="./homework/album_icon2.png" style="height: 2rem; margin-left: 0.5rem;" alt="">
-                        
-         </div>
-         <div class="player">
-            <div class="player-control">
-               <img src="./assests/player_icon1.png" class="player-control-icon">
-               <img src="./assests/player_icon2.png" class="player-control-icon">
-               <img src="./assests/player_icon3.png" class="player-control-icon" style="opacity: 1; height:2rem" ;>
-               <img src="./assests/player_icon4.png" class="player-control-icon">
-               <img src="./assests/player_icon5.png" class="player-control-icon">
-            </div>
-            <div class="playback-bar">
-               <span class="crr-time">00:00</span>
-               <input type="range" min="0" max="100" value="0" class="progress-bar">
-               <span class="tot-time">03:33</span>
-            </div>
-         </div>
-         <div class="controls">
-            <img src="./homework/controls_icon1.png"  class="controls-icon">
-            <img src="./homework/controls_icon2.png" class="controls-icon">
-            <img src="./homework/controls_icon3.png" class="controls-icon">
-            <img src="./homework/controls_icon4.png" class="controls-icon">
-            <img src="./homework/controls_icon5.png" class="controls-icon">
-         </div>
-      </div>
-
-
-
-   </div>
+    </div>
+    <script src="app.js"></script>
     
- </body>
- </html>
+</body>
+</html>
